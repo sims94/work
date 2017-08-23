@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <h2>javascript navigator</h2>
 <div align="center">
 	<div id="map" style="width: 80%; height: 50%;"></div>
 </div>
 <script>
-	console.log(navigator.geolocation);		// 사용자 위치정보를 담고 있는 객체
-// 	http가 아니면 쓸 수가 없다. 브라우저가 차단을 건다.
+	console.log(navigator.geolocation); // 사용자 위치정보를 담고 있는 객체
+	// 	http가 아니면 쓸 수가 없다. 브라우저가 차단을 건다.
 	function initMap() {
 		var map;
 		var coords;
@@ -15,13 +15,13 @@
 				"lat" : e.coords.latitude,
 				"lng" : e.coords.longitude
 			};
-			window.alert(coords.lat+"/"+coords.lng);
+			window.alert(coords.lat + "/" + coords.lng);
 			map = new google.maps.Map(document.getElementById("map"), {
 				"center" : coords,
 				"zoom" : 17
 			});
 		});
-		
+
 	}
 </script>
 <script
